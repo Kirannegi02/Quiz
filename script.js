@@ -1,39 +1,39 @@
 const quizData = [
     {
-        question: "Q1: The correct sequence of HTML tags for starting a webpage is - ",
-        a: "Head, Title, HTML, body",
-        b: "HTML, Body, Title, Head",
-        c: "HTML, Head, Title, Body",
-        d: "HTML, Head, Title, Body",
-        correct: "d",
+      question: "Q1: The correct sequence of HTML tags for starting a webpage is - ",
+      a: "Head, Title, HTML, body",
+      b: "HTML, Body, Title, Head",
+      c: "HTML, Head, Title, Body",
+      d: "HTML, Head, Title, Body",
+      correct: "c",
     },
     {
-        question: "Q2: Which of the following element is responsible for making the text bold in HTML? ",
-        a: "<b>",
-        b: "<pre>",
-        c: "<br>",
-        d: "<a>",
-        correct: "a",
+      question: "Q2: Which of the following element is responsible for making the text bold in HTML? ",
+      a: "<b>",
+      b: "<pre>",
+      c: "<br>",
+      d: "<a>",
+      correct: "a",
     },
     {
-        question: "Q3: Which of the following tag is used to insert a line-break in HTML?",
-        a: "<b>",
-        b: "<pre>",
-        c: "<a>",
-        d: "<br>",
-        correct: "d",
+      question: "Q3: Which of the following tag is used to insert a line-break in HTML?",
+      a: "<b>",
+      b: "<pre>",
+      c: "<a>",
+      d: "<br>",
+      correct: "d",
     },
     {
-        question: "Q4: Which of the following element is responsible for making the text italic in HTML? ",
-        a: "<i>",
-        b: "<italic>",
-        c: "<it>",
-        d: "<pre>",
-        correct: "a"
-    }
-];
+      question: "Q4: Which of the following element is responsible for making the text italic in HTML? ",
+      a: "<i>",
+      b: "<italic>",
+      c: "<it>",
+      d: "<pre>",
+      correct: "a",
+    },
+  ];  
 
-const quiz = document.getElementById('.quiz');
+const quiz = document.getElementById('quiz');
 const answerEls = document.querySelectorAll('.answer');
 const questionEl = document.getElementById('question');
 const a_text = document.getElementById('a_text');
@@ -66,14 +66,14 @@ function deselectAnswers() {
     answerEls.forEach(answerEls => answerEls.checked = false)
 }
 
-function getselected() {
-    let answer
+function getSelected() {
+    let answer;
     answerEls.forEach(answerEl => {
         if (answerEl.checked) {
-            answer = answerEl.id
+            answer = answerEl.id;
         }
-    })
-    return asnwer
+    });
+    return answer;
 }
 
 
@@ -97,16 +97,14 @@ submit.addEventListener('click', () => {
 
     };
 
-    questionCount++;
+    deselectAnswers();
 
-    deselectAll();
-
-    if (questionCount < quizDB.length) {
-        loadQuestion();
+    if (currentQuiz < quizData.length) {
+        loadQuiz();
     } else {
 
         showScore.innerHTML = `
-        <h3> You scored ${score}/${quizDB.length} </h3>
+        <h3> You scored ${score}/${quizData.length} </h3>
         <button class="btn" onclick="location.reload()"> Play Again</button>
         `;
 
