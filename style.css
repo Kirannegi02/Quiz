@@ -42,6 +42,20 @@ input {
     cursor: pointer;
 }
 
+#bar {
+    border-radius: 50px;
+    background-color: #f64004;
+    width: 200px;
+    height: 10px;
+}
+
+#inabar{
+    border-radius: 50px;
+    background-color: #035d05;
+    width: 0%;
+    height: 10px;
+}
+
 #submit,
 .btn {
     padding: 1rem 3rem;
