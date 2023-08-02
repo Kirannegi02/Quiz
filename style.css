@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "josefin Sans", sans-serif;
+    font-weight: 300;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #55efc4;
+
+}
+
+.quiz-container {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px 30px 100px;
+}
+
+#bar {
+    border-radius: 50px;
+    background-color: #f64004;
+    width: 200px;
+    height: 10px;
+}
+
+#inabar {
+    border-radius: 50px;
+    background-color: #035d05;
+    width: 0%;
+    height: 10px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #007aff;
+    transition: width 0.5s ease-in-out;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#question {
+    font-size: 17px;
+    margin-inline: 20px;
+}
+
+.option {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.option.selected {
+    background: #007aff;
+    color: #fff;
+    font-weight: bold;
+}
+
+#prevBtn {
+    background: #007aff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#nextBtn {
+    background: #257b69;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#submitBtn {
+    background: #17b456;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.process-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+#result {
+    .heading {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .result-body {
+        font-size: 20px;
+        margin-top: 20px;
+
+        .total-answer,
+        .percentage {
+            margin-bottom: 10px;
+        }
+    }
+}

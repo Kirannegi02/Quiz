@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div id="progress-bar"></div>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div class="process-button">
+            <button id="prevBtn" onclick="showPreviousQuestion()">Previous</button>
+            <button id="nextBtn" onclick="showNextQuestion()">Next</button>
+        </div>
+        <button id="submitBtn" onclick="submitQuiz()" style="display: none;">Submit</button>
+    </div>
+    <div id="result" class="quiz-container" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
