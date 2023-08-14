@@ -36,7 +36,7 @@ const optionsElem = document.getElementById('options');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const submitBtn = document.getElementById('submitBtn');
-const resultElem = document.getElementById('result');
+const resultElem = document.getElementById('question');
 
 // Set progress bar width
 function setProgressWidth() {
@@ -109,7 +109,8 @@ function submitQuiz() {
       </div>
      `;
 
-
+    optionsElem.style.display = 'none';
+    progress.style.display = 'none';
     resultElem.style.display = 'block';
 }
 
